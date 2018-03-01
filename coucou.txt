@@ -66,3 +66,10 @@ git reset --hard numero_commit
 git commit --amend
 
 #-a = --all et -m = --message (option commande commit)
+
+#merge la branche nom_branche dans la branche actuelle
+git merge nom_branche
+
+#annule le merge en cours
+git merge --abort
+
