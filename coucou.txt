@@ -1,5 +1,30 @@
-asdfghnj,.
-df;lgm
+#initialisation
+git init
 
-d;j
+#creer un fichier
+touch oki
+
+#status
+git status
+
+#ajouter/supprimer un fichier au/du stage
+git add coucou.txt
+git reset coucou.txt
+
+#ajouter/supprimer tous fichiers au/du stage
+git add .
+git reset
+git reset .
+
+#signature
+git config --global user.email "line.chloe.legoff@gmail.com"
+git config --global user.name "Line Le Goff"
+
+#commit avec un message
+git commit -m 'ajout coucou'
+
+#historique 
+git log #les messages
+git log -p #tous les details
+git log --name-only #les noms des fichiers modifies
 
