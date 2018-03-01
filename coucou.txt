@@ -8,6 +8,7 @@ touch oki
 git status
 
 #ajouter/supprimer un fichier au/du stage
+#(ce qui n'est pas dans le stage et dans le workspace)
 git add coucou.txt
 git reset coucou.txt
 
@@ -35,3 +36,13 @@ git checkout nom_branche
 #creer branche
 git checkout -b nom_branche
 
+#add on stage et commit tous les fichiers qui ont ete modifies
+git commit -am 'message_commit'
+
+#affiche les modifs du workspace
+git diff
+
+#affiche les modifs du stage
+git diff --staged
+# ou
+git diff --cached
