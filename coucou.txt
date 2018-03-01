@@ -18,7 +18,7 @@ git reset
 git reset .
 
 #signature
-git config --global user.email "line.chloe.legoff@gmail.com"
+git config prout --global user.email "line.chloe.legoff@gmail.com"
 git config --global user.name "Line Le Goff"
 
 #commit avec un message
@@ -60,3 +60,9 @@ git diff --cached
 #reviens dans le passe en effacant tout le futur
 #on peut utiliser git reflog pour reperer l'etat dans lequel on veut revenir
 git reset --hard numero_commit
+
+#commit ce qui est dans le stage en l'ajoutant au commit precedent
+#il propose au passage de changer le message du commit precedent
+git commit --amend
+
+#-a = --all et -m = --message (option commande commit)
