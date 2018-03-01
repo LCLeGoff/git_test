@@ -23,8 +23,15 @@ git config --global user.name "Line Le Goff"
 #commit avec un message
 git commit -m 'ajout coucou'
 
-#historique 
+#historique
 git log #les messages
 git log -p #tous les details
 git log --name-only #les noms des fichiers modifies
+
+
+#va dans le dernier commit d'une branche
+git checkout nom_branche
+
+#creer branche
+git checkout -b nom_branche
 
