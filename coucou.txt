@@ -17,14 +17,20 @@ git reset
 git reset .
 
 #signature
-git config --global user.email "line.chloe.legoff@gmail.com"
+git config prout --global user.email "line.chloe.legoff@gmail.com"
 git config --global user.name "Line Le Goff"
 
 #commit avec un message
 git commit -m 'ajout coucou'
 
-#historique 
-git log #les messages
-git log -p #tous les details
+#historique
 git log --name-only #les noms des fichiers modifies
 
+
+et reprout
+
+#commit ce qui est dans le stage en l'ajoutant au commit precedent
+#il propose au passage de changer le message du commit precedent
+git commit --amend
+
+#-a = --all et -m = --message (option commande commit)
