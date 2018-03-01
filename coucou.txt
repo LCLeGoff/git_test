@@ -8,7 +8,7 @@ touch oki
 git status
 
 #ajouter/supprimer un fichier au/du stage
-#(ce qui n'est pas dans le stage et dans le workspace)
+#(ce qui n'est pas dans le stage et dans le working directory)
 git add coucou.txt
 git reset coucou.txt
 
@@ -28,10 +28,19 @@ git commit -m 'ajout coucou'
 git log #les messages
 git log -p #tous les details
 git log --name-only #les noms des fichiers modifies
-
+git reflog #les etats
 
 #va dans le dernier commit d'une branche
 git checkout nom_branche
+
+#va dans un commit (ou un etat precedent affiche par git reflog)
+git checkout numero_commit #juste les 7 premiers digits
+
+#va dans le dernier commit d'un fichier
+#revient à annuler les dernieres modif du working directory
+#ne modifie pas le stage
+#pour annuler toutes les dernieres modif faire un git reset avant
+git checkout nom_fichier
 
 #creer branche
 git checkout -b nom_branche
@@ -39,10 +48,15 @@ git checkout -b nom_branche
 #add on stage et commit tous les fichiers qui ont ete modifies
 git commit -am 'message_commit'
 
-#affiche les modifs du workspace
+#affiche les modifs du working directory
 git diff
 
 #affiche les modifs du stage
 git diff --staged
 # ou
 git diff --cached
+
+#Attention a utiliser en dernier recourt
+#reviens dans le passe en effacant tout le futur
+#on peut utiliser git reflog pour reperer l'etat dans lequel on veut revenir
+git reset --hard numero_commit
